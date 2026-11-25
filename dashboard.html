@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GESTOCK - Gestion commerciale et gestion des stocks">
+    <title>GESTOCK | Gestion commerciale</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-icon">G</span>
+                <span>GESTOCK</span>
+            </div>
+
+            <p class="menu-label">MENU PRINCIPAL</p>
+
+            
+<nav>
+    <a href="#" class="nav-link active">▦ Tableau de bord</a>
+    <a href="pages/produits.html" class="nav-link">▤ Produits</a>
+    <a href="pages/stocks.html" class="nav-link">▣ Gestion des stocks</a>
+    <a href="pages/ventes.html" class="nav-link">▥ Ventes</a>
+    <a href="pages/fournisseurs.html" class="nav-link">♧ Fournisseurs</a>
+    <a href="pages/achats.html" class="nav-link">▧ Achats</a>
+    <a href="pages/rapports.html" class="nav-link">▧ Rapports</a>
+    <a href="pages/parametres.html" class="nav-link">⚙ Paramètres</a>
+</nav>
+
+
+            <div class="sidebar-bottom">
+                <a href="pages/parametres.html" class="nav-link">⚙ Paramètres</a>
+                <p>GESTOCK Version 1.0</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h2>Tableau de bord</h2>
+                    <p>Bienvenue dans votre espace de gestion.</p>
+                </div>
+
+               <div class="profile">
+    <div class="avatar" id="user-avatar">A</div>
+    <div>
+        <strong id="user-name">Administrateur</strong>
+        <small id="business-name">Mon commerce</small>
+    </div>
+                </div>
+            </header>
+
+            <section class="welcome">
+    <h1>Bienvenue sur <span id="welcome-business">GESTOCK</span> 👋</h1>
+    <p>Gérez votre commerce simplement et efficacement.</p>
+</section>
+            <section class="stats">
+                <article class="stat-card">
+    <span>Produits enregistrés</span>
+    <h2 id="dashboard-products">0</h2>
+    <small>Total des produits</small>
+</article>
+
+                <article class="stat-card">
+    <span>Valeur du stock</span>
+    <h2 id="dashboard-stock-value">0 FCFA</h2>
+    <small>Valeur estimée</small>
+</article><article class="stat-card">
+    <span>Ventes du jour</span>
+
+    <h2 id="dashboard-sales">0 FCFA</h2>
+
+    <small>Chiffre d'affaires</small>
+
+    <p id="dashboard-sales-evolution">
+        Comparaison avec hier
+    </p>
+</article>
+
+            <article class="stat-card">
+    <span>Alertes de stock</span>
+
+    <h2 id="dashboard-alerts">0</h2>
+
+    <small>Produits à surveiller</small>
+
+    <p id="dashboard-out-of-stock">
+        Ruptures : 0
+    </p>
+
+    <p id="dashboard-low-stock">
+        Stocks faibles : 0
+    </p>
+</article>
+
+          
+<section class="content-card">
+    <h3>Évolution des ventes</h3>
+
+    <div class="chart-container">
+        <canvas id="sales-chart"></canvas>
+    </div>
+</section>
+
+<section class="content-card">
+    <h3>Activité récente</h3>
+
+    <div id="dashboard-recent-sales">
+        <p>Chargement des dernières ventes...</p>
+    </div>
+</section>
+<section class="content-card">
+    <h3>Produits à réapprovisionner</h3>
+
+    <div id="dashboard-restock-list">
+        <p>Chargement des produits...</p>
+    </div>
+</section>
+
+        </main>
+    </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTOCK - Connexion</title>
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+    <main class="auth-container">
+        <section class="auth-brand">
+            <div class="logo">G<span>ESTOCK</span></div>
+            <h1>Gérez votre commerce simplement.</h1>
+            <p>Vos produits, vos stocks et vos ventes réunis dans un seul espace.</p>
+            <div class="brand-decoration">G</div>
+        </section>
+
+        <section class="auth-panel">
+            <div class="auth-card">
+
+                <div id="login-section">
+                    <h2>Bon retour !</h2>
+                    <p class="subtitle">Connectez-vous à votre espace commerçant.</p>
+
+                    <form id="login-form">
+                        <label for="login-email">Adresse e-mail</label>
+                        <input type="email" id="login-email"
+                               placeholder="exemple@email.com" required>
+
+                        <label for="login-password">Mot de passe</label>
+                        <input type="password" id="login-password"
+                               placeholder="Votre mot de passe" required>
+
+                        <button type="submit" id="login-button">
+                            Se connecter
+                        </button>
+                    </form>
+
+                    <p class="switch-text">
+                        Vous n'avez pas de compte ?
+                        <a href="#" id="show-signup">Créer un compte</a>
+                    </p>
+                </div>
+
+                <div id="signup-section" hidden>
+                    <h2>Créer un compte</h2>
+                    <p class="subtitle">Rejoignez GESTOCK et gérez votre commerce.</p>
+
+                    <form id="signup-form">
+                        <label for="signup-email">Adresse e-mail</label>
+                        <input type="email" id="signup-email"
+                               placeholder="exemple@email.com" required>
+
+                        <label for="signup-password">Mot de passe</label>
+                        <input type="password" id="signup-password"
+                               placeholder="Minimum 8 caractères"
+                               minlength="8" required>
+
+                        <label for="confirm-password">Confirmer le mot de passe</label>
+                        <input type="password" id="confirm-password"
+                               placeholder="Répétez votre mot de passe"
+                               minlength="8" required>
+
+                        <button type="submit" id="signup-button">
+                            Créer mon compte
+                        </button>
+                    </form>
+
+                    <p class="switch-text">
+                        Vous avez déjà un compte ?
+                        <a href="#" id="show-login">Se connecter</a>
+                    </p>
+                </div>
+
+                <p id="auth-message" role="status" aria-live="polite"></p>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

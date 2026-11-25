@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTOCK - Configuration du commerce</title>
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+    <main class="auth-container">
+        <section class="auth-brand">
+            <div class="logo">G<span>ESTOCK</span></div>
+            <h1>Votre commerce, votre espace.</h1>
+            <p>Quelques informations pour commencer à gérer votre activité.</p>
+        </section>
+
+        <section class="auth-panel">
+            <div class="auth-card">
+                <h2>Configurez votre commerce</h2>
+                <p class="subtitle">Renseignez les informations de votre entreprise.</p>
+
+                <form id="business-form">
+
+                    <label for="business-name">Nom du commerce</label>
+                    <input type="text" id="business-name"
+                           placeholder="Ex : Boutique Chez Paul" required>
+
+                    <label for="business-type">Type de commerce</label>
+                    <select id="business-type" required>
+                        <option value="">Choisir une activité</option>
+                        <option value="Alimentation">Alimentation</option>
+                        <option value="Habillement">Habillement</option>
+                        <option value="Quincaillerie">Quincaillerie</option>
+                        <option value="Cosmetique">Cosmétique</option>
+                        <option value="Electronique">Électronique</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+
+                    <label for="business-phone">Téléphone (facultatif)</label>
+                    <input type="tel" id="business-phone"
+                           placeholder="Ex : 70 00 00 00">
+
+                    <label for="business-country">Pays</label>
+                    <select id="business-country" required>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                        <option value="Mali">Mali</option>
+                        <option value="Sénégal">Sénégal</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Togo">Togo</option>
+                        <option value="Bénin">Bénin</option>
+                    </select>
+
+                    <button type="submit" id="business-button">
+                        Enregistrer mon commerce
+                    </button>
+
+                </form>
+
+                <p id="business-message" role="status"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/business.js"></script>
+
+</body>
+</html>
